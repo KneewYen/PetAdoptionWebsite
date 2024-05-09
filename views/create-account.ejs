@@ -1,0 +1,42 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+
+<%- include('template/header') %>
+
+<main>
+<div class="content">
+    <section>
+        <h3>Create an Account</h3>
+        <p>Username can contain letters and digits only.</p>
+        <p>Password must be at least 4 characters long, contain at least one letter and one digit.</p>
+        <form id="createAccountForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" pattern="[A-Za-z0-9]+" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" 
+                   pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}" required>
+            <button type="submit">Create Account</button>
+        </form>
+        <div id="message"></div>
+    </section>
+</div>
+</main>
+
+<%- include('template/footer') %>
+<script> 
+    const d = new Date();
+    const day = d.getDate();
+    const month = d.getMonth()+1;
+    const year = d.getFullYear();
+    const currentDate = day + "/" + month + "/" + year;
+    document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+    d = document.getElementById("time").innerHTML;
+</script>
+
+<script src="/js/functions.js"></script>

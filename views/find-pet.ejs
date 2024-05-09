@@ -1,0 +1,106 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+
+
+<%- include('template/header') %>
+
+
+
+<main class = "main">
+        <form id="myForm" action="/find-pet" method="post" name="findform" onsubmit="return validateForm()">
+            <fieldset>
+                
+                <label>
+                    <input type="radio" name="type" value="Cat"> Cat
+                </label>
+                <label>
+                    <input type="radio" name="type" value="Dog"> Dog
+                </label><br><br>
+                <label for="breed">Breed of Cat/Dog:
+                    <select name="breed" id="breed">
+                        <option value="Doesn't matter">Doesn't matter</option>
+                        <option value="Breed not listed">Breed not listed</option>
+                        <option value="Bengal">Bengal</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="Cockapoo">Cockapoo</option>
+                        <option value="Siamese">Siamese</option>
+                    </select>
+                </label><br><br>
+                <label for="breedNotListed">Breed not listed:
+                    <input type="text" name="breedNotListed" id="breedNotListed">
+                </label><br><br>
+                <label for="age">Preferred age:
+                    <select name="age" id="age">
+                        <option value="Doesn't matter">Doesn't matter</option>
+                        <option value="under 1">under 1</option>
+                        <option value="between 1 and 5">between 1 and 5</option>
+                        <option value="between 5 and 10">between 5 and 10</option>
+                        <option value="over 10">over 10</option>
+                    </select>
+                </label><br><br>
+                <label>Gender:
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Doesn't matter"> Doesn't matter
+                </label><br><br>
+                <div>Does your pet need to get along with...</div>
+                <label>
+                    <input type="checkbox" name="otherdogs" value="yes"> other dogs
+                </label>
+                <label>
+                    <input type="checkbox" name="othercats" value="yes"> other cats
+                </label>
+                <label>
+                    <input type="checkbox" name="smallchildren" value="yes"> small children
+                </label><br><br>
+                <input type="submit" value="Search">
+                <input type="reset" value="Clear">
+            </fieldset>
+        </form>
+        <h2>Search Results</h2>
+        <% if (pets && pets.length > 0) { %>
+            <ul>
+                <% pets.forEach(pet => { %>
+                    <li>
+                        Type: <%= pet.type %><br>
+                        Breed: <%= pet.breed %><br>
+                        Age: <%= pet.age %><br>
+                        Gender: <%= pet.gender %><br>
+                        Gets along with other dogs: <%= pet.getsAlongWithOtherDogs ? 'Yes' : 'No' %><br>
+                        Gets along with cats: <%= pet.getsAlongWithCats ? 'Yes' : 'No' %><br>
+                        Gets along with children: <%= pet.getsAlongWithChildren ? 'Yes' : 'No' %><br>
+                        Description: <%= pet.description %><br>
+                        Owner's name: <%= pet.ownerFirstName %> <%= pet.ownerLastName %><br>
+                        Owner's email: <%= pet.ownerEmail %>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No matching pets found.</p>
+        <% } %>
+        
+    </section>
+</main>
+
+<%- include('template/footer') %>
+<script src="/js/functions.js"></script>
+<script> 
+    const d = new Date();
+    const day = d.getDate();
+    const month = d.getMonth()+1;
+    const year = d.getFullYear();
+    const currentDate = day + "/" + month + "/" + year;
+    document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+    d = document.getElementById("time").innerHTML;
+</script>
+
+
+</body>
+</html>
+

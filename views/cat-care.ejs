@@ -1,0 +1,43 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+    <%- include('template/header') %>
+
+ 
+    <main class = "main">
+
+        <div class ="description">
+            <p>1. Nutritious Diet: Ensure your cat receives a balanced and appropriate diet for their age, size, and health condition. Provide high-quality cat food that meets their nutritional requirements, including essential nutrients like protein, vitamins, and minerals. Fresh water should always be available. Avoid feeding your cat human food, as it may not be suitable and can lead to health issues.</p>
+<p>2. Regular Veterinary Care: Schedule regular check-ups with a veterinarian to monitor your cat's health and address any concerns promptly. Vaccinations, parasite control (such as flea and tick prevention), and dental care are essential parts of preventive healthcare. Regular veterinary visits can help detect and prevent illnesses early, ensuring a longer and healthier life for your cat.</p>
+<p>3. Environmental Enrichment: Provide a stimulating environment for your cat to prevent boredom and promote mental and physical health. Offer a variety of toys, scratching posts, climbing structures, and hiding spots to encourage exercise, exploration, and natural behaviors. Rotate toys regularly to keep your cat engaged and stimulated.</p>
+    
+<p>4. Litter Box Maintenance: Keep the litter box clean and accessible at all times. Cats are naturally clean animals and may refuse to use a dirty litter box. Scoop the litter box daily and change the litter regularly. Place the litter box in a quiet, private location away from food and water bowls. Consider having multiple litter boxes if you have multiple cats or a multi-level home.</p>
+
+<p>5. Social Interaction and Bonding: Spend quality time with your cat to strengthen your bond and provide social interaction. Engage in interactive play sessions using toys like feather wands or laser pointers to stimulate your cat's hunting instincts and provide exercise. Petting, grooming, and talking to your cat also help build trust and deepen your relationship. </p>
+      
+<h5>NOTE THIS INFORMATION IS INSPIRED AND TAKEN FROM <a href="https://www.wikihow.com/Take-Care-of-a-Cat">WikiHow</a></h5>
+</div>
+
+       
+    </main>
+
+
+    <%- include('template/footer') %>
+
+    <script src="/js/functions.js"></script>
+    <script> 
+        const d = new Date();
+        const day = d.getDate();
+        const month = d.getMonth()+1;
+        const year = d.getFullYear();
+        const currentDate = day + "/" + month + "/" + year;
+        document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+        d = document.getElementById("time").innerHTML;
+    </script>
+</body>
+</html>

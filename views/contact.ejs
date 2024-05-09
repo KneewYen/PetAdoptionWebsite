@@ -1,0 +1,37 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+    <%- include('template/header') %>
+
+
+
+    <main class = "main">
+        <div class="description">
+                <h2>Contact Us:</h2>
+                <p>Name: Nguyen Le</p>
+                <p>ID: 40272922</p>
+                <p>Email: n_le2023@live.concordia.ca</p>
+            </div>
+        
+     </main>
+
+ 
+     <%- include('template/footer') %>
+
+     <script> 
+       const d = new Date();
+       const day = d.getDate();
+       const month = d.getMonth()+1;
+       const year = d.getFullYear();
+       const currentDate = day + "/" + month + "/" + year;
+       document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+       d = document.getElementById("time").innerHTML;
+   </script>
+</body>
+</html>
+

@@ -1,0 +1,185 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+
+main {
+  padding: 10px;
+  margin-left: 0px;
+
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 600px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color:#776B5D;
+
+    position: relative;
+    bottom: 0;
+
+   
+  }
+  
+  nav li a {
+    display: block;
+    color:#EBE3D5;
+    padding: 20px ;
+    text-decoration: none;
+     height: 120px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+  }
+  nav li a:hover {
+    background-color: #F3EEEA;
+    color:#776B5D;
+  }
+
+  
+  
+
+  h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #562b00;
+    text-align: center;
+    font-weight: 900;
+   
+  }
+  table.nav{
+    margin-left: 100px;
+    
+    width: 100%;
+
+  }
+ .content{
+  text-align: center;
+  padding: 40px;
+ 
+  
+ }
+
+
+nav {
+  width: 100%;
+  height: 150px;
+ 
+  
+}
+
+.content ul{
+  text-align: center;
+  color: #562b00;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  list-style-type: none;
+  font-size: x-large;
+  overflow: auto;
+
+}
+
+.content li {
+  display: inline-block;
+  
+}
+
+.content li a {
+  display: block;
+  padding: 60px 80px;
+  margin: 30px auto ;
+  color:#EBE3D5;
+  background-color:#776B5D;
+  border-radius: 25px;
+}
+.content li a:hover{
+  background-color:#EBE3D5;
+  color:#776B5D;
+}
+
+
+  .description {
+    text-align: justify;
+    padding: 20px;
+    width: 80%; 
+ 
+    color: #776B5D;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: x-large;
+    background-color: #EBE3D5;
+    
+    position: absolute;
+   
+  }
+  
+
+
+
+form{
+  align-items: center;
+  margin-left: 160px;
+  border-radius: 20px;
+  
+}
+
+h3{
+  color: #562b00;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-large;
+}
+
+
+footer {
+  position: relative;
+  text-align: center;
+  
+  margin-top: auto;
+  background-color:bisque;
+  color: black;
+}
+
+
+
+
+ img {
+  width: 100px;
+  height: 80px;
+}
+
+#time{
+  color:#776B5D;
+  margin-left: 15px;
+ 
+  font-size:large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+table.pets {
+  width:100%;
+  color: #EBE3D5;
+  align-items: center;
+  padding: 5px;
+}
+
+
+#img{
+
+  margin-left: 500px;
+  width : 300px;
+  height: 300px;
+  
+
+
+}
+.main {
+  margin-left: 150px;
+  
+  
+}

@@ -1,0 +1,53 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+    <%- include('template/header') %>
+
+    <div class="content">
+        <main class = "main">
+            <div class = "content"> <h3>Find Your new best friend</h3>
+                <p></p>
+                <br>
+                <br><br><br>
+               <ul>
+                <li>
+                    <a href="/find-pet"> Dogs</a>
+                </li>
+                <li><a href="/find-pet"> Cats</a></li>
+                <li><a href="/find-pet"> Others</a></li>
+               </ul>
+    
+            </div>
+    
+            <div class = "description">Description:</div>
+    
+            <div class ="description">Are you looking to bring a furry friend into your life? Look no further! We have a wonderful
+                selection of cats, dogs and others adorable friendly animal just waiting to find their forever homes.
+                Whether you're a cat person, a dog lover, or interested in something a bit more unique, we've got the perfect companion for you.
+    
+                Our cats are purring with excitement, ready to cuddle up on your lap and bring warmth to your home. They come in all shapes, sizes, and personalities, from playful kittens to sophisticated seniors.
+    
+    For those who prefer the loyal companionship of a dog, we have tail-wagging bundles of joy eager to join your family. Whether you're seeking an energetic running partner or a laid-back cuddle buddy, we have the perfect match for you.
+    
+    And if you're looking for something a little different, we also have a variety of small animals, birds, and reptiles who are just as deserving of love and care.
+            </div>
+            <br>
+            
+        </main>
+
+    <%- include('template/footer') %>
+
+      <script> 
+        const d = new Date();
+        const day = d.getDate();
+        const month = d.getMonth()+1;
+        const year = d.getFullYear();
+        const currentDate = day + "/" + month + "/" + year;
+        document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+        d = document.getElementById("time").innerHTML;
+    </script>

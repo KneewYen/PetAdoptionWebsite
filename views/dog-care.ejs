@@ -1,0 +1,55 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+    <%- include('template/header') %> <!-- Include the header partial -->
+
+
+    <main class = "main">
+    
+        <div class ="description">
+            <h3>Certainly! Adopting a dog is a wonderful experience, and taking care of them properly is essential for their health and happiness. Here are five tips to help you care for your newly adopted furry friend:</h3><br>
+
+1. Establish a Routine**: Dogs thrive on routine, so establishing a consistent schedule for feeding, walking, playtime, and bathroom breaks is crucial. Stick to regular meal times and take your dog out for walks at the same times each day. Consistency helps your dog feel secure and helps prevent behavior issues.<br>
+
+2. Provide Proper Nutrition**: Feed your dog a balanced and nutritious diet appropriate for their age, size, and activity level. Consult with your veterinarian to determine the best type of food for your dog, whether it's dry kibble, wet food, or a raw diet. Make sure your dog always has access to fresh water.<br>
+
+3. Regular Exercise and Mental Stimulation**: Dogs need both physical exercise and mental stimulation to stay healthy and happy. Take your dog for daily walks, engage in play sessions, and provide toys and puzzles that challenge their mind. Regular exercise helps prevent obesity, reduces boredom, and strengthens the bond between you and your dog.<br>
+
+4. Regular Veterinary Care**: Schedule regular check-ups with a veterinarian to ensure your dog stays healthy. Your vet will perform routine vaccinations, check for any health issues, and provide preventive care such as flea and tick prevention and dental care. Be proactive about your dog's health and address any concerns promptly.<br>
+
+5. Training and Socialization**: Invest time in training your dog and teaching them basic obedience commands such as sit, stay, come, and heel. Positive reinforcement techniques such as treats, praise, and rewards work well in training. Additionally, expose your dog to different environments, people, and other animals to help them become well-socialized and confident.<br>
+
+By following these tips and providing your newly adopted dog with love, care, and attention, you'll create a happy and fulfilling life for both you and your furry companion.s
+
+<h5>NOTE THIS INFORMATION IS INSPIRED AND TAKEN FROM <a href=" https://www.wikihow.com/Care-for-Dogs">WikiHow</a></h5>
+
+        </div>
+
+        
+        
+
+      
+
+    </main>
+    <footer>
+ 
+
+    <%- include('template/footer') %> <!-- Include the footer partial -->
+
+    <script src="/js/functions.js"></script> <!-- Updated JS path -->
+    <script> 
+        const d = new Date();
+        const day = d.getDate();
+        const month = d.getMonth()+1;
+        const year = d.getFullYear();
+        const currentDate = day + "/" + month + "/" + year;
+        document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+        d = document.getElementById("time").innerHTML;
+    </script>
+</body>
+</html>

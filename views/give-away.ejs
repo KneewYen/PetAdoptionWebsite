@@ -1,0 +1,88 @@
+<!-- 
+Nguyen Le
+ID: 40272922
+SOEN 287- Winter 2024
+Assignment 03
+Concordia University
+Date:  15 April 2024
+-->
+    <%- include('template/header') %>
+<main>
+
+
+    <div class="content">
+        <section>
+            <h3>Please fill out the following form.</h3>
+            <form id="giveform" name="giveform" action="/give-away" method="post" onsubmit="return validateForm2()">
+                <fieldset>
+                    <legend>Give away pet form</legend>
+                    <label>
+                        <input type="radio" name="type" value="Cat"> Cat
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="Dog"> Dog
+                    </label><br><br>
+                    <label>
+                        Breed of pet:
+                        <input type="text" id="breed" name="breed">
+                    </label><br><br>
+                    <label>
+                        Second breed if mixed:
+                        <input type="text" id="breedmixed" name="breedmixed">
+                    </label><br><br>
+                    <p>Animal's Gender</p>
+                    <label>
+                        <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label><br><br>
+                    <div>Pet gets along with...</div>
+                    <label>
+                        <input type="checkbox" name="otherdogs" value="yes"> other dogs
+                    </label>
+                    <label>
+                        <input type="checkbox" name="othercats" value="yes"> other cats
+                    </label>
+                    <label>
+                        <input type="checkbox" name="smallchildren" value="yes"> small children
+                    </label><br><br>
+                    <label>
+                        Tell us about your Pet:<br>
+                        <textarea id="aboutpet" name="aboutpet"></textarea>
+                    </label><br><br>
+                    <label>
+                        Current owner's first name:
+                        <input type="text" id="firstname" name="firstname">
+                    </label><br><br>
+                    <label>
+                        Current owner's last name:
+                        <input type="text" id="lastname" name="lastname">
+                    </label><br><br>
+                    <label>
+                        Email where we can reach you:
+                        <input type="email" id="email" name="email">
+                    </label><br><br>
+                    <input type="submit">
+                    <input type="reset" value="Clear">
+                </fieldset>
+            </form>
+            
+        </section>
+    </div>
+</main>
+
+    <%- include('template/footer') %>
+
+    <script src="/js/functions.js"></script> <!-- Updated path to JS -->
+    <script> 
+        const d = new Date();
+        const day = d.getDate();
+        const month = d.getMonth()+1;
+        const year = d.getFullYear();
+        const currentDate = day + "/" + month + "/" + year;
+        document.getElementById("time").innerHTML = d.toLocaleTimeString()+ " " + currentDate;
+        d = document.getElementById("time").innerHTML;
+    </script>
+</body>
+</html>

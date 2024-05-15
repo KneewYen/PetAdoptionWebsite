@@ -200,7 +200,7 @@ app.get('/privacy', (req, res) => {
 });
 
 
-app.listen(5411, () => {
-    console.log('Server is running on port 5411');
-});
 
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});

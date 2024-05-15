@@ -16,6 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const session = require('express-session');
 app.use(express.urlencoded({ extended: true }));
+const port = process.env.PORT || 3000;
 
 app.use(session({
     secret: 'your_secret_key',

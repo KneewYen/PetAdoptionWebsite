@@ -18,5 +18,5 @@ This is a **Pet Adoption Website** where users can:
    ```bash
    git clone https://github.com/your-username/pet-adoption-platform.git
 cd client && npm install
-cd ../server && npm install
+npm install
 npm run dev
